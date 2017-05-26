@@ -25,7 +25,7 @@ export default function Connector(store) {
       );
 
     invariant(
-      isPlainObject(finalMapDispatchToTarget) || isFunction(finalMapDispatchToTarget),
+      isObject(finalMapDispatchToTarget) || isFunction(finalMapDispatchToTarget),
       'mapDispatchToTarget must be a plain Object or a Function. Instead received %s.', finalMapDispatchToTarget
       );
 
