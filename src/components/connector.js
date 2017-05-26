@@ -81,7 +81,7 @@ function getStateSlice(state, mapStateToScope, shouldReturnObject = true) {
       );
   } else {
     invariant(
-      isPlainObject(slice) || isFunction(slice),
+      isObject(slice) || isFunction(slice),
       '`mapStateToScope` must return an object or a function. Instead received %s.',
       slice
       );
